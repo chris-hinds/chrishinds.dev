@@ -1,9 +1,11 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+
+import { Link, StaticQuery, graphql } from "gatsby";
+import Image from "gatsby-image";
 
 const Layout = props => {
-  const { title, children } = props
-  const [toggleNav, setToggleNav] = React.useState(false)
+  const { title, children } = props;
+  const [toggleNav, setToggleNav] = React.useState(false);
   return (
     <div className={`site-wrapper ${toggleNav ? `site-head-open` : ``}`}>
       <header className="site-head">
@@ -39,7 +41,23 @@ const Layout = props => {
           </nav>
           <div className="site-head-center">
             <Link className="site-head-logo" to={`/`}>
-              {title}
+              <StaticQuery
+                query={authorImage}
+                render={data => {
+                  const { author } = data.site.siteMetadata;
+                  return (
+                    <section>
+                      <Image
+                        fixed={data.avatar.childImageSharp.fixed}
+                        alt={author}
+                        imgStyle={{
+                          borderRadius: `50%`
+                        }}
+                      />
+                    </section>
+                  );
+                }}
+              />
             </Link>
           </div>
           <div className="site-head-right">
@@ -89,7 +107,24 @@ const Layout = props => {
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+const authorImage = graphql`
+  query AuthorQuery {
+    avatar: file(absolutePath: { regex: "/memoji_chris_hinds.png/" }) {
+      childImageSharp {
+        fixed(width: 80, height: 80) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    site {
+      siteMetadata {
+        author
+      }
+    }
+  }
+`;
+
+export default Layout;
