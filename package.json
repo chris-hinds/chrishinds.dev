@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "dev": "next"
+  },
+  "dependencies": {
+    "next": "^10.0.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "yarn": "^1.22.10"
+  },
+  "name": "chrishinds.dev",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "gray-matter": "^4.0.2",
+    "marked": "^1.2.5",
+    "raw-loader": "^4.0.2"
+  }
+}
