@@ -1,15 +1,12 @@
-import Head from "next/head";
+// chakra-ui
+import { Box } from "@chakra-ui/react";
 
 // components
 
-const DefaultLayout = ({ title, description, children }) => (
-  <>
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-    </Head>
-    <main>{children}</main>
-  </>
+const DefaultLayout = ({ children }) => (
+  <Box w="100%" p={4}>
+    {children}
+  </Box>
 );
 
 export default DefaultLayout;
