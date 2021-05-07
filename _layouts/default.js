@@ -1,12 +1,16 @@
 // chakra-ui
-import { Box } from "@chakra-ui/react";
+import { Container } from "@chakra-ui/react";
 
 // components
+import Header from "@components/Header";
 
 const DefaultLayout = ({ children }) => (
-  <Box w="100%" p={4}>
-    {children}
-  </Box>
+  <>
+    <Header />
+    <Container as="main" maxWidth="container.lg">
+      {children}
+    </Container>
+  </>
 );
 
 export default DefaultLayout;
