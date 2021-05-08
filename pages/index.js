@@ -18,7 +18,7 @@ const Home = ({ title, description }) => (
         Hello.
       </Text>
       <Text fontSize={["lg", "xl", "2xl"]}>
-        I'm a Software Engineer living in Dubai (UAE) passionate about all
+        I'm a Software Engineer living in Dubai (UAE), passionate about all
         things web from{" "}
         <TextHighlight color="brand.highlight2" weight="bold">
           performance{" "}
