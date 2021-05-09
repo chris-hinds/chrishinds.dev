@@ -1,5 +1,5 @@
 ---
-title: "Welcome to Chris's blog!"
+title: "Deploying to cloudflare pages. It's FREE"
 poster: "/images/cloudflare-pages.png"
 ---
 

@@ -18,9 +18,13 @@ const NavLink = ({ label, path }) => (
 );
 
 const Navigation = ({ navItems }) => (
-  <Flex direction={{ base: "column", md: "row" }}>
-    {navItems.map((item) => (
-      <NavLink label={item.label} path={item.path} />
+  <Flex as="nav" direction={{ base: "column", md: "row" }}>
+    {navItems.map((item, index) => (
+      <NavLink
+        key={`${index}-${item.label}`}
+        label={item.label}
+        path={item.path}
+      />
     ))}
   </Flex>
 );

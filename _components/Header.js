@@ -1,7 +1,15 @@
 import { useRef } from "react";
 
 // UI
-import { Box, Flex, IconButton, Text, useDisclosure } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  IconButton,
+  Link,
+  Text,
+  useColorModeValue,
+  useDisclosure,
+} from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
 // Components
@@ -23,11 +31,24 @@ const Header = () => {
 
   return (
     <>
-      <Flex padding={4} justify="space-between" alignItems="center">
+      <Flex
+        padding={4}
+        justify="space-between"
+        alignItems="center"
+        position="sticky"
+      >
         <Box>
-          <Text fontWeight="extrabold" fontSize="xl">
-            Chris Hinds.
-          </Text>
+          <Link
+            href="/"
+            _hover={{
+              textDecoration: "none",
+              color: useColorModeValue("brand.highlight3"),
+            }}
+          >
+            <Text fontWeight="extrabold" fontSize="xl">
+              Chris Hinds.
+            </Text>
+          </Link>
         </Box>
         <Box>
           <Box display={{ base: "none", md: "block" }}>

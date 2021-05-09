@@ -6,8 +6,9 @@ import { Box, Center, Flex, Heading, Text } from "@chakra-ui/react";
 
 // Components
 import TextHighlight from "@components/TextHeighlight";
+import PostGrid from "@components/PostsGrid";
 
-const Home = ({ title, description }) => (
+const Home = ({ posts }) => (
   <>
     <Flex height="70vh" flexDirection="column" justify="center">
       <Text
@@ -31,20 +32,27 @@ const Home = ({ title, description }) => (
         Software Engineer at BBC World Service
       </Text>
     </Flex>
+
+    <PostGrid posts={posts} />
   </>
 );
 
 export async function getStaticProps() {
   const config = await getConfig();
-  // const allPosts = await getAllPosts();
-  // console.log(allPosts);
+  const posts = await getAllPosts();
+  console.log(posts);
 
   return {
     props: {
       title: config.title,
       description: config.description,
+      posts,
     },
   };
 }
+
+Home.defaultProps = {
+  posts: [],
+};
 
 export default Home;

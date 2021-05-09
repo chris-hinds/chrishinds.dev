@@ -14,6 +14,7 @@ const getAllPosts = async () => {
     posts.push({
       slug: post.replace(".md", ""),
       title: meta.data.title,
+      poster: meta.data.poster,
     });
   }
 
