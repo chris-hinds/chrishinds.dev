@@ -7,6 +7,17 @@ import {
   ScrollRestoration
 } from "remix";
 
+// Tailwind Styles
+import tailwindStyles from "./tailwind.css"
+
+// Render links in the document
+export function links() {
+  return [
+    { rel: "stylesheet", href: tailwindStyles}
+  ]
+}
+
+// Render meta tags in the document
 export function meta() {
   return { title: "New Remix App" };
 }
