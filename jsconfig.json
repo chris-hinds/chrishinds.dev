@@ -1,12 +1,9 @@
 {
-    "compilerOptions": {
-        "baseUrl": "./",
-        "paths": {
-            "@components/*": ["_components/*"],
-            "@layouts/*": ["_layouts/*"],
-            "@posts/*": ["_posts/*"],
-            "@styles/*": ["_styles/*"],
-            "@api": ["api/index"]
-        }
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./app/*"]
     }
+  }
 }
