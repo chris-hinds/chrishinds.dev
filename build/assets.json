@@ -1,0 +1,32 @@
+{
+  "version": "c5521ad4",
+  "entry": {
+    "module": "/build/entry.client-IVCCOPVE.js",
+    "imports": [
+      "/build/_shared/chunk-OIGBEDEP.js",
+      "/build/_shared/chunk-E7VMOUYL.js"
+    ]
+  },
+  "routes": {
+    "root": {
+      "id": "root",
+      "path": "",
+      "module": "/build/root-SDXQVVHD.js",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/index": {
+      "id": "routes/index",
+      "parentId": "root",
+      "index": true,
+      "module": "/build/routes/index-B2XKRKM5.js",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    }
+  },
+  "url": "/build/manifest-C5521AD4.js"
+}
